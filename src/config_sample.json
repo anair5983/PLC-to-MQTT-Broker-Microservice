@@ -1,0 +1,18 @@
+{
+    "ads": {
+      "localAmsNetId": "localAmsNetId", 
+      "localAdsPort": ,
+      "targetAmsNetId": "targetAmsNetId",
+      "targetAdsPort": ,
+      "routerAddress": "routerAddress",
+      "routerTcpPort": 
+    },  
+    "mqtt": {
+      "brokerUrl": "mqtt://ENTER MQTT URL HERE",
+      "mqttPort": 1883,
+      "baseTopic": "ENTER THE BASE TOPIC STRUCTURE YOU WOULD LIKE HERE"
+    }, 
+    "samplingInterval": 2000
+  }
+  
+  
