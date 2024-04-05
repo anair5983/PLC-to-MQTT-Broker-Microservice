@@ -2,7 +2,10 @@
 This repo consists of a microservice that connects to a Beckhoff PLC and publishes to an MQTT Broker
 
 ## How to get set up
-In the src folder go to the configs directory, there will be a mqtt_topic.json file which will be used to define which PLC tags we wish to read from and also allows us to provide the mapping name for the data from that topic to the broker.
+In the src folder go to the configs directory, there should be a mqtt_topic.json file which will be used to define which PLC tags we wish to read from and also allows us to provide the mapping name for the data from that topic to the broker. 
+
+**If there is not a mqtt_topic.json file:** Please refer to the mqtt_topic_sample.json file which outlines the structure that the mqtt_topic.json needs to have.
+*Note: In this case you will have to create the mqtt_topic.json and enter your information there, anything done in the sample file is ignored.
 
 Once the tags have been added run the following commands:
 ```script
