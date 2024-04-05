@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+tags.txt
+config.json
+plc_tags.txt
+mqtt_topic.json
