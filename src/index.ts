@@ -13,9 +13,9 @@
 
 import { ADSClient } from './class/ADSClient';
 import {IMQTTPayload } from 'interface/IMQTTPayload';
-import config from './config.json';
 import { MQTTClient } from './class/MQTTClient';
 import * as fs from 'fs';
+import { IConfiguraton } from 'interface/IConfiguration';
 
 type PLCTopics = { 
 	[key: string]: string 
@@ -45,8 +45,8 @@ const shutdown = async (adsClient: ADSClient, mqttClient: MQTTClient) => {
  * a read and a shutdown of the connection via the Beckhoff ADS protocol
  */
 
-async function main()
-{
+async function main(){
+	const config: IConfiguraton = JSON.parse(fs.readFileSync('./src/config.json', 'utf-8'))
 	const topicJson: PLCTopics = JSON.parse(fs.readFileSync('./src/configs/mqtt_topic.json','utf-8'))
 	const tags = Object.keys(topicJson)
 	const adsclient = new ADSClient(config.ads, tags);
